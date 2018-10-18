@@ -1,0 +1,158 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box; }
+
+body {
+  background: #f5f5f5;
+  font-family: Sans-Serif; }
+
+.site {
+  height: 100vh;
+  width: 100vw;
+  background: url("https://res.cloudinary.com/tihos/image/upload/q_auto:best/v1538273117/anon_e4r8a7.jpg");
+  background-size: cover;
+  display: flex;
+  overflow: hidden; }
+  .site .sidenav {
+    height: 100%;
+    width: 150px;
+    border-right: #60605f 2px solid;
+    display: flex;
+    flex-direction: column; }
+    .site .sidenav .logo {
+      width: 150px;
+      height: 150px;
+      background: #60605f;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .site .sidenav .logo i {
+        font-size: 2rem;
+        color: #f9f9f9;
+        transform: rotate(270deg); }
+    .site .sidenav .social {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px; }
+      .site .sidenav .social div {
+        color: #f9f9f9;
+        width: 150px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .site .sidenav .social div p {
+          transform: rotate(270deg); }
+        .site .sidenav .social div:hover {
+          color: #c8aaa0; }
+  .site .main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: inherit; }
+    .site .main header {
+      height: 150px;
+      display: flex; }
+      .site .main header .name {
+        width: 47%;
+        display: flex;
+        align-items: center;
+        padding-left: 80px;
+        color: #f9f9f9;
+        font-size: 2.5rem;
+        font-weight: bold; }
+      .site .main header nav {
+        width: 53%; }
+        .site .main header nav ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          list-style: none; }
+          .site .main header nav ul li {
+            color: #f9f9f9;
+            padding: 20px 0; }
+            .site .main header nav ul li.current {
+              color: #c8aaa0;
+              border-bottom: #c8aaa0 1px solid; }
+            .site .main header nav ul li:hover {
+              color: #c8aaa0; }
+    .site .main main {
+      height: 70%;
+      display: flex;
+      color: #f9f9f9;
+      align-items: center; }
+      .site .main main .left, .site .main main .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column; }
+      .site .main main .left {
+        padding-left: 80px; }
+        .site .main main .left .outer-bar {
+          margin: 5px 0 12px 0;
+          width: 50%;
+          height: 3px;
+          background: #60605f; }
+          .site .main main .left .outer-bar .inner-bar {
+            width: 75%;
+            height: 3px;
+            background: #c8aaa0; }
+        .site .main main .left p {
+          font-size: 0.8rem;
+          color: #60605f; }
+          .site .main main .left p.selected {
+            font-size: 1rem;
+            color: #f9f9f9; }
+      .site .main main .right {
+        padding-right: 6rem; }
+        .site .main main .right h2 {
+          width: 100%;
+          font-size: 3rem; }
+        .site .main main .right p {
+          line-height: 1.5;
+          padding-top: 1.5rem;
+          font-size: 1.25rem; }
+    .site .main footer {
+      height: 250px;
+      color: #f9f9f9;
+      margin-top: auto;
+      background: rgba(12, 12, 12, 0.75);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex; }
+      .site .main footer .events, .site .main footer .news {
+        width: 50%; }
+      .site .main footer .events {
+        padding: 3rem 4rem; }
+        .site .main footer .events h4 {
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 1rem; }
+        .site .main footer .events .event-wrapper {
+          display: flex; }
+          .site .main footer .events .event-wrapper div {
+            width: 50%;
+            color: #999;
+            line-height: 1.5; }
+            .site .main footer .events .event-wrapper div .location {
+              font-weight: bold;
+              color: #f9f9f9; }
+      .site .main footer .news {
+        display: flex; }
+        .site .main footer .news img {
+          object-fit: cover;
+          width: 200px;
+          height: 100%; }
+        .site .main footer .news .news-wrapper {
+          padding: 3rem 4rem; }
+          .site .main footer .news .news-wrapper h4 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem; }
+          .site .main footer .news .news-wrapper p {
+            color: #999;
+            line-height: 1.5; }

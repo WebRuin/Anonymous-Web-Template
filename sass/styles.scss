@@ -1,0 +1,244 @@
+// Colors
+$black: #070707;
+$dark-brown: #533d2d;
+$dark-grey: #60605f;
+$white: #f9f9f9;
+$grey: #999;
+$tan: #c8aaa0;
+$brown: #926d57;
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: Sans-Serif;
+}
+
+.site {
+  height: 100vh;
+  width: 100vw;
+  background: url('https://res.cloudinary.com/tihos/image/upload/q_auto:best/v1538273117/anon_e4r8a7.jpg');
+  background-size: cover;
+  display: flex;
+  overflow: hidden;
+  
+  .sidenav {
+    height: 100%;
+    width: 150px;
+    border-right: $dark-grey 2px solid;
+    display: flex;
+    flex-direction: column;
+    
+    .logo {
+      width: 150px;
+      height: 150px;
+      background: $dark-grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      i {
+        font-size: 2rem;
+        color: $white;
+        transform: rotate(270deg);
+      }
+    }
+    
+    .social {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+
+      div {
+        color: $white;
+        width: 150px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          transform: rotate(270deg);
+        }
+
+        &:hover {
+          color: $tan;
+        }
+      }
+    }
+  }
+  
+  .main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: inherit;
+    
+    header {
+      height: 150px;
+      display: flex;
+      
+      .name {
+        width: 47%;
+        display: flex;
+        align-items: center;
+        padding-left: 80px;
+        color: $white;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      
+      nav {
+        width: 53%;
+        
+        ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          list-style: none;
+          
+          li{
+            color: $white;
+            padding: 20px 0;
+            
+            &.current {
+              color: $tan;
+              border-bottom: $tan 1px solid;
+            }
+            
+            &:hover {
+              color: $tan;
+            }
+          }
+        }
+      }
+    }
+    
+    main {
+      height: 70%;
+      display: flex;
+      color: $white;
+      align-items: center;
+      
+      .left, .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .left {
+        padding-left: 80px;
+        
+        .outer-bar {
+          margin: 5px 0 12px 0;
+          width: 50%;
+          height: 3px;
+          background: $dark-grey;
+          
+          .inner-bar {
+            width: 75%;
+            height: 3px;
+            background: $tan;
+          }
+        }
+        
+        p {
+          font-size: 0.8rem;
+          color: $dark-grey;
+          
+          &.selected {
+            font-size: 1rem;
+            color: $white;
+          }
+        }
+      }
+      
+      .right {
+        padding-right: 6rem;
+        
+        h2 {
+          width: 100%;
+          font-size: 3rem;
+        }
+        
+        p {
+          line-height: 1.5;
+          padding-top: 1.5rem;
+          font-size: 1.25rem;
+        }
+      }
+    }
+    
+    footer {
+      height: 250px;
+      color: $white;
+      margin-top: auto;
+      background: rgba(12,12,12,0.75);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      
+      .events, .news {
+        width: 50%;
+      }
+      
+      .events {
+        padding: 3rem 4rem;
+        
+        h4 {
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+        
+        .event-wrapper{
+          display: flex;
+          
+          div {
+            width: 50%;
+            color: $grey;
+            line-height: 1.5;
+            
+            .location {
+              font-weight: bold;
+              color: $white; 
+            }
+          }
+        }
+      }
+      
+      .news {
+        display: flex;
+        
+        img {
+          object-fit: cover;
+          width: 200px;
+          height: 100%;
+        }
+        
+        .news-wrapper {
+          padding: 3rem 4rem;
+          
+          h4 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+          }
+          
+          p {
+            color: $grey;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
